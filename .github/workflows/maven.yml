@@ -20,4 +20,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: deploy package
-      run: mvn deploy
+      run: mvn deploy -Dregistry=https://maven.pkg.github.com/supergaga -Dtoken=${{ secrets.GITHUB_TOKEN }}
