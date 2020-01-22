@@ -18,3 +18,5 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: deploy package
+      run: mvn deploy -Dregistry=https://maven.pkg.github.com/supergaga -Dtoken=0f65955ce507d404ad8592906c2942de652d8b12
