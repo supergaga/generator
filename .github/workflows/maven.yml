@@ -1,4 +1,4 @@
-name: Java CI
+name: Package CI
 
 on: 
   push:
@@ -19,4 +19,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: deploy package
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/supergaga -Dtoken=0f65955ce507d404ad8592906c2942de652d8b12
+      run: mvn deploy -Dregistry=https://maven.pkg.github.com/supergaga -Dtoken=${{ secrets.SECRET_NAME }}
