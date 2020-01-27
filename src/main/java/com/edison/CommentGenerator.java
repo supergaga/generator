@@ -1,4 +1,4 @@
-package com.github.supergaga;
+package com.edison;
 
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
