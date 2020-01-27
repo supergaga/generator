@@ -12,11 +12,11 @@
             <distributionManagement>
                 <repository>
                     <id>maven</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
                 </repository>
                 <snapshotRepository>
                     <id>maven</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </snapshotRepository>
             </distributionManagement>
         </profile>
