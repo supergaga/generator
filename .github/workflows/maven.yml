@@ -18,6 +18,6 @@ jobs:
         java-version: 1.8
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: package
-      run: mvn -B package --file pom.xml ; mvn deploy -Dtoken=${{ secrets.deploy }}
-#    - name: deploy
-#      run: mvn -X deploy -Dregistry=https://maven.pkg.github.com/supergaga -Dtoken=${{ secrets.deploy }}
+      run: mvn -B package --file pom.xml
+    - name: deploy
+      run: mvn -X deploy -Dregistry=https://maven.pkg.github.com/supergaga/generator -Dtoken=${{ secrets.GITHUB_TOKEN }}
