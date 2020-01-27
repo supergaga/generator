@@ -20,4 +20,4 @@ jobs:
     - name: package
       run: mvn -B package --file pom.xml
     - name: deploy
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/supergaga -Dtoken=GH_TOKEN
+      run: mvn -X deploy -Dregistry=https://maven.pkg.github.com/supergaga -Dtoken=GH_TOKEN
