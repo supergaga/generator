@@ -5,17 +5,17 @@
 
     <groupId>com.github.supergaga</groupId>
     <artifactId>generator</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <profiles>
         <profile>
             <id>maven</id>
             <distributionManagement>
                 <repository>
-                    <id>snapshots</id>
+                    <id>maven</id>
                     <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                 </repository>
                 <snapshotRepository>
-                    <id>snapshots</id>
+                    <id>maven</id>
                     <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                 </snapshotRepository>
             </distributionManagement>
