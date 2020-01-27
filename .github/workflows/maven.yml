@@ -20,7 +20,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy
+      run: mvn deploy -P github
       env:
         GITHUB_TOKEN: ${{ github.token }} # GITHUB_TOKEN is the default env for the password
 
@@ -33,7 +33,7 @@ jobs:
         server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
 
     - name: Publish to Apache Maven Central
-      run: mvn deploy
+      run: mvn deploy -P maven
       env:
         MAVEN_USERNAME: shaonan
         MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
