@@ -5,7 +5,7 @@
 
     <groupId>com.edison</groupId>
     <artifactId>generator</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <profiles>
         <profile>
             <id>maven</id>
@@ -31,6 +31,7 @@
             </distributionManagement>
         </profile>
     </profiles>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
