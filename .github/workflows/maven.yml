@@ -16,10 +16,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: package
+      run: mvn -B package --file pom.xml ; mvn deploy
+      with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-      run: mvn -B package --file pom.xml ;mvn deploy
-
-#    - name: package
-#      run: mvn -B package --file pom.xml
 #    - name: deploy
 #      run: mvn -X deploy -Dregistry=https://maven.pkg.github.com/supergaga -Dtoken=${{ secrets.deploy }}
