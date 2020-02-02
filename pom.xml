@@ -5,7 +5,7 @@
 
     <groupId>com.github.supergaga</groupId>
     <artifactId>generator</artifactId>
-    <version>1.0.6</version>
+    <version>1.0.0</version>
     <profiles>
         <!-- Deployment profile (required so these plugins are only used when deploying) -->
         <profile>
@@ -86,7 +86,7 @@
                 <version>1.6.8</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>maven</serverId>
+                    <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
@@ -96,7 +96,7 @@
     <distributionManagement>
         <!-- Central Repository -->
         <snapshotRepository>
-            <id>maven</id>
+            <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>

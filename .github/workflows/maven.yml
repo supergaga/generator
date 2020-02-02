@@ -15,18 +15,27 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Set up Apache Maven Central
-        uses: actions/setup-java@v1
-        with: # running setup-java again overwrites the settings.xml
-          java-version: 1.8
-          server-id: maven # Value of the distributionManagement/repository/id field of the pom.xml
-          server-username: MAVEN_USERNAME # env variable for username in deploy
-          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
-          gpg-private-key: ${{ secrets.gpg_private_key }} # gpg private key to import
-          gpg-passphrase: GPG_PASSPHRASE # env variable for gpg signing in deploy
-      - name: Publish to Apache Maven Central
-        run: mvn deploy
-        env:
-          MAVEN_USERNAME: ${{ secrets.username }}
-          MAVEN_CENTRAL_TOKEN: ${{ secrets.pwd }}
-          GPG_PASSPHRASE: ${{ secrets.gpg_passphrase }}
+
+
+      - name: Release Maven package
+          uses: samuelmeuli/action-maven-publish@v1
+          with:
+            gpg_private_key: ${{ secrets.gpg_private_key }}
+            gpg_passphrase: ${{ secrets.gpg_passphrase }}
+            nexus_username: ${{ secrets.pwd }}
+            nexus_password: ${{ secrets.nexus_password }}
+
+#      - name: Set up Apache Maven Central
+#        uses: actions/setup-java@v1
+#        with: # running setup-java again overwrites the settings.xml
+#          java-version: 1.8
+#          server-username: MAVEN_USERNAME # env variable for username in deploy
+#          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+#          gpg-private-key: ${{ secrets.gpg_private_key }} # gpg private key to import
+#          gpg-passphrase: GPG_PASSPHRASE # env variable for gpg signing in deploy
+#      - name: Publish to Apache Maven Central
+#        run: mvn deploy -P deploy
+#        env:
+#          MAVEN_USERNAME: ${{ secrets.username }}
+#          MAVEN_CENTRAL_TOKEN: ${{ secrets.pwd }}
+#          GPG_PASSPHRASE: ${{ secrets.gpg_passphrase }}
