@@ -9,7 +9,7 @@
 
 
     <name>generator-comment-plugin</name>
-    <description>A  comment plugin for MyBatis Generator to use Lombok annotations and database annotation</description>
+    <description>A comment plugin for MyBatis Generator to use Lombok annotations and database annotation</description>
     <url>https://github.com/supergaga/generator</url>
 
     <licenses>
@@ -41,6 +41,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
     <profiles>
         <!-- Deployment profile (required so these plugins are only used when deploying) -->
         <profile>
@@ -105,6 +106,17 @@
                 </plugins>
             </build>
         </profile>
+
+        <profile>
+            <id>github</id>
+            <distributionManagement>
+                <repository>
+                    <id>github</id>
+                    <name>Generator repo</name>
+                    <url>https://maven.pkg.github.com/supergaga/generator</url>
+                </repository>
+            </distributionManagement>
+        </profile>
     </profiles>
 
     <dependencies>
@@ -126,17 +138,10 @@
                 <configuration>
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <distributionManagement>
-        <!-- Central Repository -->
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 
 </project>
