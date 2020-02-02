@@ -6,6 +6,12 @@
     <groupId>com.github.supergaga</groupId>
     <artifactId>generator</artifactId>
     <version>1.0.0</version>
+
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
     <profiles>
         <!-- Deployment profile (required so these plugins are only used when deploying) -->
         <profile>
