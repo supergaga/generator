@@ -1,9 +1,9 @@
-name: Package CI
+name: release
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - v*
 jobs:
   release:
     runs-on: ubuntu-18.04
@@ -11,7 +11,7 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v2
 
-      - name: Install Java and Maven
+      - name: Install Java 1.8
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
@@ -25,17 +25,7 @@ jobs:
           nexus_username: ${{ secrets.username }}
           nexus_password: ${{ secrets.pwd }}
 
-#      - name: Set up Apache Maven Central
-#        uses: actions/setup-java@v1
-#        with: # running setup-java again overwrites the settings.xml
-#          java-version: 1.8
-#          server-username: MAVEN_USERNAME # env variable for username in deploy
-#          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
-#          gpg-private-key: ${{ secrets.gpg_private_key }} # gpg private key to import
-#          gpg-passphrase: GPG_PASSPHRASE # env variable for gpg signing in deploy
-#      - name: Publish to Apache Maven Central
-#        run: mvn deploy -P deploy
-#        env:
-#          MAVEN_USERNAME: ${{ secrets.username }}
-#          MAVEN_CENTRAL_TOKEN: ${{ secrets.pwd }}
-#          GPG_PASSPHRASE: ${{ secrets.gpg_passphrase }}
+      - name: Publish to GitHub Packages Apache Maven
+        run: mvn deploy -P github
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
