@@ -11,7 +11,6 @@ import java.util.*;
 /**
  * @author TSN
  * @date 2019/12/26
- * @Description
  */
 public class CommentGenerator extends EmptyCommentGenerator {
     private final Collection<Annotations> annotations;

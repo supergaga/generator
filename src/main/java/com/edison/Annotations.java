@@ -10,7 +10,6 @@ import java.util.List;
 /**
  * @author TSN
  * @date 2020/1/20
- * @Description
  */
 public enum Annotations {
 

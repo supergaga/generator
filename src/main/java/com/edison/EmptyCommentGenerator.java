@@ -12,7 +12,6 @@ import java.util.Set;
 /**
  * @author TSN
  * @date 2019/12/26
- * @Description
  */
 public class EmptyCommentGenerator implements CommentGenerator {
     @Override
