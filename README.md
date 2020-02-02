@@ -201,7 +201,7 @@ mybaitis generator 的config中 配置
 ```
 
 如果使用github的仓库 可以参照[这里](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-apache-maven-for-use-with-github-packages)配置，
-项目中的引用地址使用[这里](https://github.com/supergaga/generator/packages) 任意一个 package都行
+项目中的引用地址使用任意一个[package](https://github.com/supergaga/generator/packages) 都行
 
 ## Authors
 
