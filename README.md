@@ -1,5 +1,5 @@
 # mybatis-generator-comment-plugin 
-[![package](https://github.com/{supergaga}/{generator}/workflows/{package}/badge.svg)](https://github.com/{supergaga}/{generator}/actions)
+[![package](https://github.com/supergaga/generator/workflows/package/badge.svg)](https://github.com/supergaga/generator/actions)
 
 A plugin for [MyBatis Generator](http://mybatis.github.io/generator/)
 to use [Lombok](http://projectlombok.org/) annotations and table annotations
