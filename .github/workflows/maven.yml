@@ -22,8 +22,8 @@ jobs:
         with:
           gpg_private_key: ${{ secrets.gpg_private_key }}
           gpg_passphrase: ${{ secrets.gpg_passphrase }}
-          nexus_username: ${{ secrets.pwd }}
-          nexus_password: ${{ secrets.nexus_password }}
+          nexus_username: ${{ secrets.username }}
+          nexus_password: ${{ secrets.pwd }}
 
 #      - name: Set up Apache Maven Central
 #        uses: actions/setup-java@v1
