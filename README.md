@@ -6,6 +6,12 @@ to use [Lombok](http://projectlombok.org/) annotations and table annotations
 
 reference [mybatis-generator-lombok-plugin](https://github.com/softwareloop/mybatis-generator-lombok-plugin)
 
+NOTE:
+这个demo项目里面生成的实体类的过程是使用注释生成的，现在看来很牵强，也很幼稚。如果你是初学者这个代码可以看看跑跑试试，没有太多的学习价值。
+这个项目推到远端，还有一个目的是测试GitHub Action的功能以及自动打包上传到maven中央仓库。 我觉得自动化这部分 可以参考下。
+2021年06月09日10:49:55
+
+
 数据库建表语句
 ```mysql
 CREATE TABLE `user` (
